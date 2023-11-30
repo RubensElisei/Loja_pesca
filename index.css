@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@1,300;1,400&family=Lato:ital,wght@1,300&family=Noto+Sans:wght@400;700&family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Fira Sans Condensed", sans-serif;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Estilo do fundo da página */
+.background {
+    position: relative;
+    background: linear-gradient(rgb(48, 151, 182), rgb(48, 151, 182));
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); 
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estilo do cabeçalho em geral */
+.cabeçario-link {
+    display: flex;
+    gap: 2.5rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/* Estilo das funções do cabeçalho */
+.cabeçario-link a {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+.cabeçario-link a:hover {
+    color: rgb(255, 255, 255);
+    transition: 0.3s all;
+}
+
+/* Estilo dos textos */
+.texto-geral {
+    text-align: center;
+    width: 80%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.texto-geral h1 {
+    font-size: 35px;
+}
+
+.texto-geral h2 {
+    font-size: 30px;
+}
+
+.texto-geral p {
+    margin: 10px 0;
+    font-size: 25px;
+    max-width: 1300px;
+    padding: 0px 0px 0px 200px;
+    font-weight: 500;
+}
+
+.paragrafos {
+    line-height: 200%;
+}
+
+.paragrafos span {
+    color: rgb(29, 206, 29);
+    font-weight: 350;
+}
+
+/* Estilo da Imagem */
+#foto-nemo {
+    width: 100%;
+    height: 100vh;
+    transition: all 0.3s linear;
+    border: 3px solid  rgba(255, 255, 255, 0.8);
+}
+
+.comprar {
+    font-size: 18px;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 170px;
+    border-radius: 38px;
+    border: 1px solid black; 
+    cursor: pointer;
+}
+
+.comprar:hover {
+    background-color: rgb(255, 69, 0);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+

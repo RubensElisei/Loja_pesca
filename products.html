@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="products.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Products</title>
+</head>
+<body>
+    <div class="background">
+        <header>
+            <div class="cabeçario-link">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="user.html">Usuario</a>
+                </li>
+                <li>
+                    <a href="products.html">Produtos</a>
+                </li>
+                <li>
+                    <a href="carrinho.html"> <ion-icon name="cart-outline"></ion-icon></a>
+                </li>
+            </div>
+        </header>
+
+        <!-- Botão para adicionar novo produto -->
+        <button id="btnNovoProduto">Adicionar Novo Produto</button>
+
+        <div class="escrito"><h1>Produtos em Destaque</h1></div>
+        <div class="produtos">
+            
+            <!-- Produto 1 -->
+            <div class="produto" id="produto1">
+                <h2>Molinete De pesca HT 200 Azul</h2>
+                <img src="imagem_produto1.jpg" alt="Produto 1">
+                <p>Molinete é um equipamento indispensável na tralha de um pescador podendo ser utilizado em pesqueiros, rios, lagos e até nos mares além de ser um equipamento prático e de simples manuseio</p>
+                <p>Preço: R$31,50</p>
+                <a href="#" class="buy-button" id="btnAdicionar1">Adicionar ao Carrinho</a>
+                <a href="#" class="remove-button" data-produto="1">Remover</a>
+            </div>
+        
+            <!-- Produto 2 -->
+            <div class="produto" id="produto2">
+                <h2>Molinete Shimano FX 2500 FC Fricção Dianteira</h2>
+                <img src="imagem_produto2.jpg" alt="Produto 2">
+                <p>Molinete é um equipamento indispensável na tralha de um pescador podendo ser utilizado em pesqueiros, rios, lagos e até nos mares além de ser um equipamento prático e de simples manuseio</p>
+                <p>Preço: R$115,00</p>
+                <a href="#" class="buy-button" id="btnAdicionar2">Adicionar ao Carrinho</a>
+                <a href="#" class="remove-button" data-produto="2">Remover</a>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="produto" id="produto3">
+                <h2>Linha Fluorocarbon Marine Sports Vexter Leader</h2>
+                <img src="imagem_produto3.jpg" alt="Produto 3">
+                <p>A linha é invisível na água, aliando resistência a abrasão, tornando sua pescaria, ainda 
+                    mais produtiva e especial.</p>
+                <p>Preço: R$36,90</p>
+                <a href="#" class="buy-button" id="btnAdicionar3">Adicionar ao Carrinho</a>
+                <a href="#" class="remove-button" data-produto="3">Remover</a>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="produto" id="produto4">
+                <h2>Chapéu De Proteção Jogá</h2>
+                <img src="imagem_produto4.jpg" alt="Produto 4">
+                <p>O Chapéu De Proteção Jogá estilo australiano é feito para o uso durante a pescaria ou navegação.
+                    Foi pensado para pescadores que procuram proteção para a cabeça e nuca em suas pescarias, evitando os fortes raios solares durante o dia.</p>
+                <p>Preço: R$53,90</p>
+                <a href="#" class="buy-button" id="btnAdicionar4">Adicionar ao Carrinho</a>
+                <a href="#" class="remove-button" data-produto="4">Remover</a>
+            </div>  
+
+            <!-- Produto 5 -->
+            <div class="produto" id="produto5">
+                <h2>Vara Pesca Bambu Completa Tilápia (3,10m)</h2>
+                <img src="imagem_produto5.jpg" alt="Produto 5">
+                <p>A vara de bambu ponta fina é considerada a mais tradicional das varas de pesca. Esse material desempenha uma ação mais moderada na pescaria; ajudando a conseguir arremessos precisos e bom boa apresentação..</p>
+                <p>Preço: R$45,00</p>
+                <a href="#" class="buy-button" id="btnAdicionar5">Adicionar ao Carrinho</a>
+                <a href="#" class="remove-button" data-produto="5">Remover</a>
+            </div>
+
+            <!-- Produto 6 -->
+            <div class="produto" id="produto6">
+                <h2>Vara MS Potenza 5.6 Pés (1.68m) Média de 10-20 libras PO-S 562M Molinete</h2>
+                <img src="imagem_produto6.jpg" alt="Produto 6">
+                <p>A Vara para Molinete é muito utilizada em pesqueiros por possuir um ótimo comprimento para longos arremessos,</p>
+                <p>Preço: R$110,00</p>
+                <a href="#" class="buy-button" id="btnAdicionar6">Adicionar ao Carrinho</a>
+                <a href="#" class="remove-button" data-produto="6">Remover</a>
+            </div>
+
+        </div>
+
+        <script>
+            for (let i = 1; i <= 6; i++) {
+                const btnAdicionar = document.getElementById(`btnAdicionar${i}`);
+                const btnRemover = document.querySelector(`.produtos #produto${i} .remove-button`);
+
+                if (btnAdicionar) {
+                    btnAdicionar.addEventListener("click", function(event) {
+                        event.preventDefault();
+                        alert('Produto adicionado ao carrinho.');
+                    });
+                }
+
+                if (btnRemover) {
+                    btnRemover.addEventListener("click", function(event) {
+                        event.preventDefault();
+                        const produtoIndex = this.getAttribute("data-produto");
+                        removeProduto(produtoIndex);
+                    });
+                }
+            }
+
+            function removeProduto(index) {
+                const produto = document.querySelector(`.produtos #produto${index}`);
+                if (produto) {
+                    produto.remove();
+                    alert('Produto removido da página.');
+                }
+            }
+
+            const btnNovoProduto = document.getElementById('btnNovoProduto');
+
+            if (btnNovoProduto) {
+                btnNovoProduto.addEventListener('click', function () {
+                    adicionarNovoProduto();
+                });
+            }
+
+            function adicionarNovoProduto() {
+                const novoProduto = document.createElement('div');
+                novoProduto.classList.add('produto');
+
+                novoProduto.innerHTML = `
+                    <h2>Novo Produto</h2>
+                    <img src="imagem_novo_produto.jpg" alt="Novo Produto">
+                    <p>Descrição do novo produto...</p>
+                    <p>Preço: R$XX,XX</p>
+                    <a href="#" class="buy-button">Adicionar ao Carrinho</a>
+                    <a href="#" class="remove-button" data-produto="X">Remover</a>
+                `;
+
+                const produtosContainer = document.querySelector('.produtos');
+                produtosContainer.appendChild(novoProduto);
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="user.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>User</title>
+</head>
+<body>
+    <!-- Divisão para organizar a parte visual inicial -->
+    <div class="background">
+        <header>
+            <div class="cabeçario-link">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="user.html">Usuario</a>
+                </li>
+                <li>
+                    <a href="products.html">Produtos</a>
+                </li>
+                <li>
+                    <a href="carrinho.html"> <ion-icon name="cart-outline"></ion-icon></a>
+                </li>
+            </div>
+        </header>
+         <!-- Divisão para texto-->
+         <div class="texto">   
+            <h2>Antes de começar as compras<br>Faça o seu Registro na NemoStore!</h2>
+            </div> 
+        <div class="box">
+        <form id="myForm">
+            <fieldset>
+                <legend><b>Resgistro de Login</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="LabelInput">Nome</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="sobrenome" id="sobrenome" class="inputUser" required>
+                    <label for="sobrenome" class="LabelInput">Sobrenome</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="LabelInput">Email</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="number" name="idade" id="idade" class="inputUser" required>
+                    <label for="idade" class="LabelInput">Idade</label>
+
+                    <button id="btnAdicionar" type="submit" class="form-button">Adicionar</button>
+                    <button id="btnCancelar" type="submit" class="form-button">Cancelar</button>
+                    
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        document.getElementById("btnAdicionar").addEventListener("click", function(event) {
+            event.preventDefault();
+            alert('Registro concluído');
+            window.location.href = "products.html";
+        });
+
+        document.getElementById("btnCancelar").addEventListener("click", function(event) {
+            event.preventDefault();
+            alert('Falha ao Registrar');
+            window.location.href = "user.html";
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <!-- Divisão para organizar a parte visual inicial -->
+    <div class="background">
+        <header>
+            <div class="cabeçario-link">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="user.html">Usuario</a>
+                </li>
+                <li>
+                    <a href="products.html">Produtos</a>
+                </li>
+                <li>
+                    <a href="carrinho.html"> <ion-icon name="cart-outline"></ion-icon></a>
+                </li>
+            </div>
+        </header>
+        <!-- Configuração da foto nemo -->
+        <img id="foto-nemo" src="nemo2.jpg" alt="foto-nemo">
+        <!-- Textos-->
+        <div class="texto-container">
+            <div class="texto-geral">
+                <h1>Bem-vindo à NemoStore</h1>
+                <h2>Sua Destinação para o Mundo da Pesca!</h2>
+                <div class="paragrafos">
+                    <p>Na NemoStore, mergulhe em uma experiência única e apaixonante no universo da pesca.</br> Somos mais do que uma loja, somos seu parceiro dedicado para todas as suas necessidades de pesca.</br> Seja você um pescador experiente ou alguém que esta começando neste emocionante hobby,<br> a NemoStore tem algo especial para oferecer a todos.</p>
+                </div>
+            </div>
+        <!--Botão-->
+        <div>
+            <button class="comprar" id="botaoComprar"> Ir às compras!
+            </button>
+        </div>
+
+        <script>
+            document.getElementById("botaoComprar").addEventListener("click", function(event) {
+                event.preventDefault();
+                window.location.href = "user.html";});
+        </script>
+        </div>
+    </div>
+</body>
+</html>
